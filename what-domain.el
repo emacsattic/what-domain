@@ -7,7 +7,7 @@
 ;; Keywords: extensions
 ;; Created: 2001-09-20
 
-;; $Id: what-domain.el,v 1.1 2001/09/21 03:26:13 friedman Exp $
+;; $Id: what-domain.el,v 1.2 2016/11/24 20:24:53 friedman Exp $
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -342,7 +342,7 @@
 
              ;; Forward "1" -> "001" for completion convenience
              (and (= key-index 2)
-                  (let ((q (int-to-string (string-to-int key))))
+                  (let ((q (int-to-string (string-to-number key))))
                     (or (string= q key)
                         (set (intern q ob) key)))))))
     ob))
